@@ -2,15 +2,31 @@
 
 .page-footer__navigation {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
+
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @media (max-width: @width-mobile-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @width-tablet) {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .page-footer__navigation-wrapper {
   &:not(:last-child) {
-    padding: 20px 0;
+    @media (max-width: @width-mobile-only) {
+      padding: 20px 0;
 
-    text-align: center;
-    border-bottom: 1px solid #d9d9d9;
+      text-align: center;
+
+      border-bottom: 1px solid #d9d9d9;
+    }
   }
 }

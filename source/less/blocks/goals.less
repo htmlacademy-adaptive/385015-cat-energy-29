@@ -2,10 +2,20 @@
   margin-bottom: 20px;
 }
 
-// .goals__list {}
+.goals__list {
+  display: grid;
+
+  @media (min-width: @width-desktop) {
+    // font-size: 36px;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
 
 .goals__item {
   &:not(:last-child) {
-    margin-bottom: 20px;
+    @media (max-width: @width-desktop) {
+      margin-bottom: 20px;
+    }
   }
 }

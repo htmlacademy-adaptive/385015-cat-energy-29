@@ -1,33 +1,80 @@
 .hero {
-  padding-top: 27px;
+  position: relative;
   margin-bottom: 20px;
 
-  text-align: center;
-  color: #ffffff;
+  @media (max-width: @width-mobile-only) {
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.hero__wrapper {
+  @media (min-width: @width-desktop) {
+    display: flex;
+    position: relative;
+  }
+}
+
+.hero__header-wrapper {
+  @media (min-width: @width-tablet) {
+    padding-left: 120px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 300px;
+    padding-left: 80px;
+  }
+}
+
+.hero__header {
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @width-tablet) {
+    padding-top: 65px;
+    margin-bottom: 40px;
+  }
 }
 
 .hero__slogan {
-  font-family: 14px;
+  font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
 }
 
 .hero__image-wrapper {
   width: 280px;
   height: 270px;
-}
 
-.hero__background {
-  &--primary {
-    width: 320px;
-    height: 302px;
+  @media (min-width: @width-tablet) {
+    position: relative;
+    width: 720px;
+    height: 694px;
+    z-index: -1;
+    margin-top: -60px;
 
-    background-image: url("../../img/hero-bg.png");
-    background-color: @color-accent;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    // удалить после подключения адаптивной графики
+    img {
+      width: 720px;
+      height: 694px;
+    }
   }
 
-  // &--secondary {}
+  @media (min-width: @width-desktop) {
+    width: 552px;
+    height: 499px;
+    margin-top: 20px;
+
+    // удалить после подключения адаптивной графики
+    img {
+      width: 552px;
+      height: 499px;
+    }
+  }
 }

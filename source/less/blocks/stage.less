@@ -1,6 +1,11 @@
 .stage {
   // display: grid;
-  min-height: 60px;
+  // min-height: 60px;
+  position: relative;
+
+  @media (min-width: @width-tablet) {
+    width: 250px;
+  }
 
   // &--first {}
 
@@ -12,9 +17,50 @@
 }
 
 .stage__description {
-  width: 200px;
-  margin-left: 20px;
+  margin: 0;
+  margin-left: 80px;
 
   font-family: @font-secondary;
   color: #444444;
+
+  @media (min-width: @width-tablet) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 57px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @color-accent;
+
+    @media (max-width: @width-mobile-only) {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    @media (min-width: @width-tablet) {
+      margin-bottom: 30px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @width-tablet) {
+      position: absolute;
+      content: "1";
+      left: 90px;
+      top: -40px;
+      z-index: -1;
+
+      font-size: 280px;
+      line-height: 1;
+      color: #f2f2f2;
+    }
+  }
 }

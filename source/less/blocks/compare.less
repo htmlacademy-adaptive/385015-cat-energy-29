@@ -1,5 +1,24 @@
 .compare {
   display: flex;
+
+  @media (min-width: @width-tablet) {
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+  }
 }
 
-// .compare__image {}
+.compare__image {
+  & img {
+
+    // удалить в последующем - это для соблюдения размеров
+    @media (min-width: @width-tablet) {
+      width: auto;
+      height: 512px;
+    }
+
+    // @media (min-width: @width-desktop) {
+    //   width: 280px;
+    // }
+  }
+}
