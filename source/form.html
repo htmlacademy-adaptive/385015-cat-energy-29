@@ -15,7 +15,7 @@
     <nav class="main-navigation list padding-wrapper">
       <h2 class="visually-hidden">Навигация сайта</h2>
 
-      <div class="main-navigation__mobile">
+      <div class="main-navigation__header">
         <img class="main-navigation__logo-icon logo-icon" src="./img/logo-icon-simple.svg"
           alt="Логотип интернет-магазина." width="33" height="38">
 
@@ -46,7 +46,7 @@
   <main class="page-main">
 
     <section class="request">
-      <div class="padding-wrapper">
+      <div class="margin-wrapper">
         <h1 class="heading heading--primary request__header">Подбор программы</h1>
         <p class="request__subtitle">Заполните анкету, и мы подберем <br>
           программу питания для вашего кота</p>
@@ -54,11 +54,11 @@
 
       <form class="request__form request-form" action="???" method="post">
         <!-- не вижу в ТЗ куда форма должна слать данные -->
-        <div class="request__fieldsets-wrapper"> <!-- тут декоратив, надо убрать враппер -->
-          <fieldset class="request-form__group request-form__person">
+        <div class="request__fieldsets-wrapper">
+          <fieldset class="request-form__group request-form__person margin-wrapper">
             <legend class="visually-hidden">Данные Вашего кота</legend>
 
-            <ul class="request__list list-fields list padding-wrapper">
+            <ul class="request__list list-fields list">
               <li class="request__item field">
                 <label class="field__label">Имя:*
                   <input class="field__input" type="text" name="cat-name" placeholder="Имя кота" value="Барсик"
@@ -77,10 +77,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="request-form__group request-form__goal">
+          <fieldset class="request-form__group request-form__goal padding-wrapper">
             <legend class="visually-hidden">Цель программы</legend>
 
-            <ul class="request__list list-controls list padding-wrapper">
+            <ul class="request__list list-controls list">
               <li class="request__item control">
                 <label class="control__label">Похудение
                   <input class="visually-hidden control__input" type="radio" name="goal" value="weight-loss" checked>
@@ -101,10 +101,10 @@
           </fieldset>
         </div>
         <fieldset class="request-form__group request-form__owner">
-          <legend class="heading heading--secondary request-form__header">Контактные данные <br> (владельца кота)
+          <legend class="heading heading--secondary request-form__header">Контактные данные (владельца кота)
           </legend>
 
-          <ul class="request__list list-fields padding-wrapper">
+          <ul class="request-form__owner-list request__list list-fields list margin-wrapper">
             <li class="request__item field">
               <label class="field__label">E-mail:*
                 <input class="field__input" type="email" placeholder="name@domain.com" value="kuklachev@gmail.com"
@@ -122,8 +122,8 @@
         <fieldset class="request-form__group request-form__comment">
           <legend class="heading heading--secondary request-form__header">Комментарий</legend>
 
-          <div class="request__item field padding-wrapper">
-            <textarea class="field__input" name="comment" cols="30" rows="10"
+          <div class="request__item field margin-wrapper">
+            <textarea class="field__textarea field__input" name="comment" cols="30" rows="10"
               placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
@@ -131,7 +131,7 @@
         <fieldset class="request-form__group request-form__optional">
           <legend class="heading heading--secondary request-form__header">Дополнительно</legend>
 
-          <ul class="request__list list-controls padding-wrapper">
+          <ul class="request-form__optional-list request__list list-controls list margin-wrapper">
             <li class="request__item control">
               <label class="control__label">Сахарозаменитель
                 <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
@@ -166,7 +166,7 @@
 
   <footer class="page-footer">
     <section class="map">
-      <div class="padding-wrapper">
+      <div class="margin-wrapper">
         <h2 class="visually-hidden">Наш офис</h2>
 
         <div class="map__invite">
@@ -182,8 +182,8 @@
       </div>
 
       <div class="map__image-wrapper">
-        <img src="./img/map-location.png" alt="Адрес офиса. Санкт-Петербург, улица Большая Конюшенная, дом 19/8."
-          width="320" height="362">
+        <img class="map__image" src="./img/map-location.png"
+          alt="Адрес офиса. Санкт-Петербург, улица Большая Конюшенная, дом 19/8." width="320" height="362">
       </div>
     </section>
 

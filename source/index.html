@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <nav class="main-navigation list padding-wrapper">
+  <header class="page-header page-header--bg">
+    <nav class="main-navigation list">
       <h2 class="visually-hidden">Навигация сайта</h2>
 
-      <div class="main-navigation__mobile">
+      <div class="main-navigation__header">
         <img class="main-navigation__logo-icon logo-icon" src="./img/logo-icon-simple.svg"
           alt="Логотип интернет-магазина." width="33" height="38">
 
@@ -45,23 +45,18 @@
 
   <main class="page-main">
     <section class="hero">
-      <div class="padding-wrapper">
-        <h1 class="heading heading--primary">Функциональное питание для котов</h1>
-        <!-- .heading - для ff,fw,color .heading--....... - для fz -->
-        <p class="hero__slogan">Занялся собой? Займись котом!</p>
-
-        <a class="button button--more button--mobile_off" href="./form.html">Подобрать программу</a>
+      <div class="hero__wrapper padding-wrapper">
+        <div class="hero__header-wrapper">
+          <h1 class="hero__header heading heading--primary">Функциональное <br> питание для котов</h1>
+          <p class="hero__slogan">Занялся собой? Займись котом!</p>
+          <a class="button button--more button--mobile_off" href="./form.html">Подобрать программу</a>
+        </div>
 
         <div class="hero__image-wrapper">
           <img src="./img/hero-image.png" alt="Изображение продукции." width="280" height="270">
         </div>
 
         <a class="button button--more button--mobile_on" href="./form.html">Подобрать программу</a>
-      </div>
-
-      <div class="hero__background"><!-- Подложка из двух половинок. При адаптиве фоны будут переключаться -->
-        <div class="hero__background--primary"></div>
-        <div class="hero__background--secondary"></div>
       </div>
     </section>
 
@@ -89,7 +84,7 @@
     </section>
 
     <section class="stages padding-wrapper">
-      <h2 class="heading heading--primary">Как это работает</h2>
+      <h2 class="stages__header heading heading--primary">Как это работает</h2>
 
       <ul class="stages__list list">
         <li class="stages__item stage stage--first"><!-- иконки и цифры будут добавляться через псевдо-элементы -->
@@ -115,38 +110,42 @@
       </ul>
     </section>
 
-    <section class="example padding-wrapper">
-      <h2 class="heading heading--primary example__header">Живой пример</h2>
+    <section class="example">
+      <div class="example__wrapper padding-wrapper">
+        <div class="example__text-wrapper">
+          <h2 class="heading heading--primary example__header">Живой пример</h2>
 
-      <p class="example__description">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
 
-      <dl class="example__results results">
-        <div class="results__item">
-          <dt class="results__title">Снижение веса</dt>
-          <dd class="results__description">5 кг</dd>
+          <dl class="example__results results">
+            <div class="results__item">
+              <dt class="results__title">Снижение веса</dt>
+              <dd class="results__description">5 кг</dd>
+            </div>
+            <div class="results__item">
+              <dt class="results__title">Затрачено времени</dt>
+              <dd class="results__description">60 дней</dd>
+            </div>
+            <div class="results__item results__item--final">
+              <dt>Затраты на питание:</dt>
+              <dd>15 000 руб.</dd>
+            </div>
+          </dl>
         </div>
-        <div class="results__item">
-          <dt class="results__title">Затрачено времени</dt>
-          <dd class="results__description">60 дней</dd>
-        </div>
-        <div class="results__item results-final">
-          <dt>Затраты на питание:</dt>
-          <dd>15 000 руб.</dd>
-        </div>
-      </dl>
 
-      <div class="example__compare compare">
-        <div class="compare__image">
-          <img src="./img/example-before.png" alt="Пример до прохождения программы." width="140" height="256">
-        </div>
-        <button class="example__toggle" type="button">
-          <span class="visually-hidden">Изменить соотношение изображений.</span>
-        </button>
-        <div class="compare__image">
-          <img src="./img/example-after.png" alt="Пример после прохождения программы." width="140" height="256">
+        <div class="example__compare compare">
+          <div class="compare__image">
+            <img src="./img/example-before.png" alt="Пример до прохождения программы." width="140" height="256">
+          </div>
+          <button class="example__toggle" type="button">
+            <span class="visually-hidden">Изменить соотношение изображений.</span>
+          </button>
+          <div class="compare__image">
+            <img src="./img/example-after.png" alt="Пример после прохождения программы." width="140" height="256">
+          </div>
         </div>
       </div>
     </section>
@@ -154,11 +153,11 @@
 
   <footer class="page-footer">
     <section class="map">
-      <div class="padding-wrapper">
+      <div class="map__invite-wrapper margin-wrapper">
         <h2 class="visually-hidden">Наш офис</h2>
 
         <div class="map__invite">
-          <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
 
           <address class="map__address">
             ул. Большая <br>
@@ -170,8 +169,8 @@
       </div>
 
       <div class="map__image-wrapper">
-        <img src="./img/map-location.png" alt="Адрес офиса. Санкт-Петербург, улица Большая Конюшенная, дом 19/8."
-          width="320" height="362">
+        <img class="map__image" src="./img/map-location.png"
+          alt="Адрес офиса. Санкт-Петербург, улица Большая Конюшенная, дом 19/8." width="320" height="362">
       </div>
     </section>
 
@@ -218,7 +217,7 @@
         </ul>
       </div>
       <div class="page-footer__navigation-wrapper">
-        <div class="copyright">
+        <div class="copyright padding-wrapper">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span>HTML Academy</span>
             <svg width="27" height="43" viewBox="0 0 60 60">

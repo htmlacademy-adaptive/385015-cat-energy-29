@@ -11,7 +11,7 @@ html {
 
 body {
   height: 100%;
-  width: 320px;
+  width: @width-mobile;
   margin: 0 auto;
   padding: 0;
 
@@ -21,6 +21,14 @@ body {
   color: #000000;
 
   background-color: #ffffff;
+
+  @media (min-width: @width-tablet) {
+    width: @width-tablet;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: @width-desktop;
+  }
 }
 
 img {
@@ -43,17 +51,45 @@ a {
   border: 0;
 }
 
-.padding-wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
 .list {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
 
   list-style: none;
+
+  @media (max-width: @width-mobile-only) {
+    flex-direction: column;
+  }
+}
+
+.padding-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  // margin: 0 auto;
+
+  @media (min-width: @width-tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.margin-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @media (min-width: @width-tablet) {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
 }

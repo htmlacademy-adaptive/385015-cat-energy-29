@@ -1,19 +1,43 @@
-// .main-navigation {}
+.main-navigation {
+  padding-top: 14px;
 
-.main-navigation__mobile {
+  @media (min-width: @width-tablet) {
+    padding: 0 30px;
+    padding-top: 25px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding: 0 110px;
+    padding-top: 56px;
+  }
+}
+
+.main-navigation__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   min-height: 65px;
-  padding-top: 14px;
   padding-bottom: 14px;
 
-  border-bottom: 1px solid #e6e6e6;
+
+  @media (max-width: @width-mobile-only) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
 }
 
 // .main-navigation__logo-icon {}
 
-// .main-navigation__logo-name {}
+.main-navigation__logo-name {
+  @media (min-width: @width-tablet) {
+    margin-left: 13px;
+  }
+}
 
 // .main-navigation__list {}
 
@@ -23,5 +47,17 @@
 }
 
 .main-navigation__menu-wrapper {
-  display: none;
+  @media (max-width: @width-mobile-only) {
+    display: none;
+
+    background-color: #ffffff;
+    position: absolute;
+    top: 65px;
+    width: 320px;
+    z-index: 10;
+  }
+
+  @media (min-width: @width-tablet) {
+    padding-top: 14px;
+  }
 }

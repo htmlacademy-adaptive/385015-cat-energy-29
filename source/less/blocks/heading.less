@@ -1,9 +1,14 @@
 .heading {
   font-weight: 400;
+  margin: 0;
 
   &--primary {
     font-size: 36px;
     line-height: 1;
+
+    @media (min-width: @width-tablet) {
+      font-size: 60px;
+    }
   }
 
   &--secondary {
@@ -19,4 +24,15 @@
 
 .heading__page {
   margin-bottom: 40px;
+
+  @media (max-width: @width-mobile-only) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: @width-tablet) {
+    // font-size: 60px;
+    // margin-left: 20px;
+    // margin-right: 20px;
+  }
 }

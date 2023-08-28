@@ -1,7 +1,16 @@
 .goal-card {
+  display: grid;
   padding: 30px 20px 18px;
 
   background-color: #f2f2f2;
+
+  @media (min-width: @width-tablet) {
+    // раскладка гридами
+    padding-top: 77px;
+    padding-bottom: 52px;
+    padding-left: 52px;
+    padding-right: 29px;
+  }
 
   // &--weight_loss {}
 
@@ -10,21 +19,36 @@
 
 .goal-card__title {
   margin-bottom: 30px;
+  text-transform: uppercase;
+
+  @media (min-width: @width-tablet) {
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 
 .goal-card__description {
-  margin-bottom: 23px;
+  margin: 0;
+  padding-bottom: 23px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #d9d9d9;
 
   font-family: @font-secondary;
 
-  &::after {
-    display: block;
-    height: 1px;
-    margin-bottom: 15px;
-    content: "";
-
-    background-color: #d9d9d9;
+  @media (min-width: @width-tablet) {
+    border: none;
+    font-size: 16px;
+    line-height: 24px;
   }
+
+  // &::after {
+  //   display: block;
+  //   height: 1px;
+  //   margin-bottom: 15px;
+  //   content: "";
+
+  //   background-color: #d9d9d9;
+  // }
 }
 
 .goal-card__link {

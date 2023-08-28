@@ -1,1 +1,48 @@
-// .page-header {}
+.page-header {
+  position: relative;
+}
+
+.page-header--bg {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    background-image: url("../../img/hero-bg.png");
+    background-color: @color-accent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: @width-mobile-only) {
+      width: 320px;
+      height: 302px;
+      margin-top: 79px;
+    }
+
+    @media (min-width: @width-tablet) {
+      display: none;
+    }
+
+    @media (min-width: @width-desktop) {
+      display: block;
+      width: 720px;
+      height: 694px;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  & .navigation__link {
+    &--current::after {
+      @media (min-width: @width-desktop) {
+        background-color: #ffffff;
+      }
+    }
+
+    @media (min-width: @width-desktop) {
+      color: #ffffff;
+    }
+  }
+}

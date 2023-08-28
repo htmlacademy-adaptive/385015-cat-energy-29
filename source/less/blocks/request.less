@@ -9,14 +9,22 @@
 
 .request__subtitle {
   margin-bottom: 39px;
+
+  text-transform: uppercase;
 }
 
 // .request__form {}
 
 .request__list {
+  flex-direction: column;
+
   &--bordered {
     padding-bottom: 24px;
     border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: @width-tablet) {
+    // padding: 0 40px;
   }
 }
 
