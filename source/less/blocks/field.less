@@ -5,6 +5,15 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .field__input {
@@ -23,6 +32,11 @@
   &::placeholder {
     color: #444444;
   }
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .field__textarea {
@@ -30,7 +44,38 @@
 }
 
 .field__label {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
+
+  &--email,
+  &--phone {
+    &::after {
+      position: absolute;
+      content: "";
+      right: 14px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  &--email::after {
+    width: 18px;
+    height: 14px;
+
+    background-image: url("../../img/icon-email.svg");
+  }
+
+  &--phone::after {
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../../img/icon-phone.svg");
+  }
 }

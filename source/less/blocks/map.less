@@ -1,9 +1,6 @@
 .map {
-  // @media (min-width: @width-desktop) {
-  // width: @width-desktop;
   position: relative;
   background-color: #f2f2f2;
-  // }
 }
 
 .map__invite-wrapper {
@@ -64,17 +61,19 @@
   }
 
   @media (min-width: @width-desktop) {
-    // width: @width-desktop;
     margin-left: 86px;
   }
 }
 
 .map__address-city {
   margin: 0;
+
+  @media (min-width: @width-tablet) {
+    padding-top: 20px;
+  }
 }
 
 .map__image-wrapper {
-
   // ??? DEL
   & img {
     @media (min-width: @width-tablet) {

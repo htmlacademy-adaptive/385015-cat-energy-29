@@ -3,13 +3,64 @@
 
   font-size: 16px;
   line-height: 18px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .control__label {
-  margin-left: 15px;
+  position: relative;
+  padding-left: 45px;
 
   text-transform: uppercase;
   color: #444444;
+}
+
+.control__title {
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    content: "";
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+}
+
+input[type="radio"] + .control__title::before {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .control__title::after {
+  top: 3px;
+  left: 8px;
+  width: 13px;
+  height: 13px;
+
+  background-color: @color-accent;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + .control__title::after {
+  top: 4px;
+  left: 6px;
+  width: 19px;
+  height: 15px;
+
+  background-image: url("../../img/check.svg");
 }
 
 // .control__input {}

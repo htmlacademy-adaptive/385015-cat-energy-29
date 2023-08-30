@@ -1,29 +1,128 @@
 .goal-card {
+  position: relative;
   display: grid;
   padding: 30px 20px 18px;
 
   background-color: #f2f2f2;
 
+  &::before {
+    position: absolute;
+    content: "";
+
+    background-color: #68b738;
+    border-radius: 50%;
+
+    @media (max-width: @width-mobile-only) {
+      width: 50px;
+      height: 50px;
+      left: 20px;
+      top: 24px;
+    }
+
+    @media (min-width: @width-tablet) and (max-width: @width-desktop) {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      right: 62px;
+    }
+
+    @media (min-width: @width-desktop) {
+      width: 100px;
+      height: 100px;
+      left: 52px;
+      top: 47px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
   @media (min-width: @width-tablet) {
-    // раскладка гридами
     padding-top: 77px;
     padding-bottom: 52px;
     padding-left: 52px;
-    padding-right: 29px;
+    padding-right: 315px;
   }
 
-  // &--weight_loss {}
+  @media (min-width: @width-desktop) {
+    padding-right: 70px;
+  }
 
-  // &--weight_gain {}
+  &--weight_loss {
+    &::after {
+      background-image: url("../../img/catalog-slim.svg");
+
+      @media (max-width: @width-mobile-only) {
+        width: 36px;
+        height: 50px;
+        left: 27px;
+        top: 21px;
+      }
+
+      @media (min-width: @width-tablet) and (max-width: @width-desktop) {
+        width: 140px;
+        height: 194px;
+        right: 92px;
+        top: 81px;
+      }
+
+      @media (min-width: @width-desktop) {
+        width: 70px;
+        height: 97px;
+        left: 67px;
+        top: 41px;
+      }
+    }
+  }
+
+  &--weight_gain {
+    &::after {
+      background-image: url("../../img/catalog-pro.svg");
+
+      @media (max-width: @width-mobile-only) {
+        width: 67px;
+        height: 28px;
+        left: 12px;
+        top: 35px;
+      }
+
+      @media (min-width: @width-tablet) and (max-width: @width-desktop) {
+        width: 268px;
+        height: 112px;
+        right: 29px;
+        top: 135px;
+      }
+
+      @media (min-width: @width-desktop) {
+        width: 134px;
+        height: 56px;
+        left: 33px;
+        top: 67px;
+      }
+    }
+  }
 }
 
 .goal-card__title {
   margin-bottom: 30px;
+  padding-left: 70px;
   text-transform: uppercase;
 
   @media (min-width: @width-tablet) {
+    padding: 0;
+
     font-size: 36px;
     line-height: 1;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 164px;
+    margin-bottom: 72px;
   }
 }
 
@@ -40,20 +139,27 @@
     font-size: 16px;
     line-height: 24px;
   }
-
-  // &::after {
-  //   display: block;
-  //   height: 1px;
-  //   margin-bottom: 15px;
-  //   content: "";
-
-  //   background-color: #d9d9d9;
-  // }
 }
 
 .goal-card__link {
+  position: relative;
+
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: #000000;
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    content: "";
+    width: 24px;
+    height: 12px;
+    margin-left: 15px;
+
+    background-image: url("../../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }

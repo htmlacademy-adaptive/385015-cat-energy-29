@@ -1,19 +1,35 @@
 .stage {
-  // display: grid;
-  // min-height: 60px;
   position: relative;
+
+  counter-increment: number;
 
   @media (min-width: @width-tablet) {
     width: 250px;
   }
 
-  // &--first {}
+  &--first {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-01.svg");
+    }
+  }
 
-  // &--second {}
+  &--second {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-02.svg");
+    }
+  }
 
-  // &--third {}
+  &--third {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-03.svg");
+    }
+  }
 
-  // &--fourth {}
+  &--fourth {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-04.svg");
+    }
+  }
 }
 
 .stage__description {
@@ -36,6 +52,8 @@
     width: 60px;
     height: 60px;
     background-color: @color-accent;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     @media (max-width: @width-mobile-only) {
       position: absolute;
@@ -53,11 +71,12 @@
   &::after {
     @media (min-width: @width-tablet) {
       position: absolute;
-      content: "1";
+      content: counter(number);
       left: 90px;
       top: -40px;
       z-index: -1;
 
+      font-family: @font-primary;
       font-size: 280px;
       line-height: 1;
       color: #f2f2f2;

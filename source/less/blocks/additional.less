@@ -1,25 +1,43 @@
 .additional {
   margin-bottom: 35px;
 
+  &::before {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    margin-bottom: -23px;
+
+    background-color: @color-accent;
+  }
+
   @media (min-width: @width-tablet) {
     margin-bottom: 70px;
   }
 }
 
 .additional__header {
+  position: relative;
   margin-bottom: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: max-content;
 
-  margin-left: 20px;
-  margin-right: 20px;
+  background-color: #ffffff;
 
   @media (min-width: @width-tablet) {
     margin-left: 30px;
     margin-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-size: 36px;
+    line-height: 1;
   }
 
   @media (min-width: @width-desktop) {
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 }
 
@@ -32,14 +50,15 @@
 }
 
 .additional__list {
+  margin-bottom: 35px;
+
   @media (min-width: @width-tablet) {
     display: block;
-    padding: 26px 38px 28px;
-    flex-grow: 1;
   }
 
   @media (min-width: @width-desktop) {
     padding: 0;
+    margin: 0;
   }
 }
 
@@ -56,29 +75,65 @@
 
   @media (min-width: @width-tablet) {
     padding: 26px 38px 28px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: @width-desktop) {
     display: flex;
+    padding: 15px 0;
+    align-items: center;
   }
 }
 
 .additional__title {
+  margin: 0;
   margin-bottom: 13px;
 
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: #222222;
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 285px;
+    margin: 0;
+  }
 }
 
 .additional__parameter {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin: 0;
 
   font-family: @font-secondary;
+  line-height: 1;
+
+  @media (min-width: @width-tablet) and (max-width: @width-tablet-only) {
+    justify-content: flex-end;
+
+    & span:last-child {
+      margin-left: 50px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 275px;
+    margin-left: 40px;
+  }
 }
 
-// .additional__order {}
+.additional__order {
+  margin-top: 15px;
+  grid-column: 1 / -1;
+
+  @media (min-width: @width-desktop) {
+    width: 260px;
+    margin: 0;
+    margin-left: 40px;
+  }
+}

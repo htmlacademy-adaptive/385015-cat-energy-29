@@ -1,5 +1,6 @@
 .gift {
-  padding: 60px 43px;
+  padding: 59px;
+  padding-bottom: 43px;
   margin-bottom: 35px;
 
   background-image: url("../../img/gift-bg.png");
@@ -14,7 +15,37 @@
 }
 
 .gift__description {
+  position: relative;
+  margin: 0;
+
   font-family: @font-secondary;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: #ffffff;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+
+
+    background-image: url("../../img/icon-gift.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @width-tablet) and (max-width: @width-tablet-only) {
+    display: flex;
+    text-align: start;
+
+    &::before {
+      margin: 0;
+      margin-right: 264px;
+    }
+  }
 }

@@ -3,10 +3,9 @@
 }
 
 .page-header--bg {
-  &::before {
+  &::after {
     content: "";
     position: absolute;
-    top: 0;
     z-index: -1;
 
     background-image: url("../../img/hero-bg.png");
@@ -18,7 +17,6 @@
     @media (max-width: @width-mobile-only) {
       width: 320px;
       height: 302px;
-      margin-top: 79px;
     }
 
     @media (min-width: @width-tablet) {
