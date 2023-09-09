@@ -1,14 +1,33 @@
 .request {
-  padding-top: 27px;
-  padding-bottom: 32px;
+  margin-bottom: 31px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 82px;
+  }
+}
+
+.request__header-wrapper {
+  margin-bottom: 38px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 65px;
+  }
 }
 
 .request__header {
-  margin-bottom: 37px;
+  margin-bottom: 39px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 55px;
+  }
 }
 
 .request__subtitle {
-  margin-bottom: 39px;
+  margin: 0;
 
   text-transform: uppercase;
 

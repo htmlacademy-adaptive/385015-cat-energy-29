@@ -1,15 +1,23 @@
-// .copyright {}
+.copyright {
+  @media (min-width: @width-tablet) {
+    margin-left: 20px;
+  }
+}
 
 .copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
 
   font-family: @font-secondary;
   font-size: 16px;
   line-height: 20px;
   color: #444444;
+
+  @media (min-width: @width-tablet) {
+    // margin-left: 23px;
+    padding-top: 0;
+  }
 }
 
 .copyright__logo {

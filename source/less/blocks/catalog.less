@@ -1,14 +1,16 @@
 .catalog {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 
   @media (min-width: @width-tablet) {
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 90px;
   }
 
   @media (min-width: @width-desktop) {
     margin-left: 110px;
     margin-right: 110px;
+    margin-bottom: 100px;
   }
 }
 
@@ -17,11 +19,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
-    row-gap: 120px;
+    row-gap: 142px;
   }
 
   @media (min-width: @width-desktop) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    row-gap: 143px;
   }
 }
 

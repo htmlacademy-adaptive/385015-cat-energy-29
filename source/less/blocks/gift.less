@@ -1,7 +1,7 @@
 .gift {
   padding: 59px;
   padding-bottom: 43px;
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
 
   background-image: url("../../img/gift-bg.png");
   background-color: @color-accent;
@@ -9,8 +9,16 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  @media (min-width: @width-tablet) {
+    padding-top: 71px;
+    padding-left: 78px;
+    padding-bottom: 64px;
+  }
+
   @media (min-width: @width-desktop) {
     margin: 0;
+    padding: 40px;
+    padding-top: 60px;
   }
 }
 
@@ -32,20 +40,31 @@
     margin: 0 auto;
     margin-bottom: 48px;
 
-
     background-image: url("../../img/icon-gift.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-width: @width-tablet) {
+      margin: 0;
+      margin-right: 264px;
+      margin-top: -15px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: @width-tablet) and (max-width: @width-tablet-only) {
     display: flex;
-    text-align: start;
 
-    &::before {
-      margin: 0;
-      margin-right: 264px;
-    }
+    text-align: start;
+  }
+
+  @media (min-width: @width-desktop) {
+    display: grid;
+    height: 100%;
   }
 }

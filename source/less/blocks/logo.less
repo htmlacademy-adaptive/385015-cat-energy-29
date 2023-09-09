@@ -3,6 +3,17 @@
 .logo-icon {
   width: 33px;
   height: 38px;
+
+  @media (min-width: @width-tablet) {
+    width: 60px;
+    height: 50px;
+    margin: 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 70px;
+    height: 60px;
+  }
 }
 
 .logo-name {
@@ -12,5 +23,17 @@
   &--big {
     width: 128px;
     height: 24px;
+    display: block;
+    margin: auto;
+    margin-top: 2px;
+
+    @media (min-width: @width-tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 121px;
+    height: 38px;
   }
 }

@@ -16,11 +16,14 @@
       <h2 class="visually-hidden">Навигация сайта</h2>
 
       <div class="main-navigation__header">
-        <img class="main-navigation__logo-icon logo-icon" src="./img/logo-icon-simple.svg"
-          alt="Логотип интернет-магазина." width="33" height="38">
+        <a class="main-navigation__logo-icon" href="./index.html">
+          <img class="logo-icon" src="./img/logo-icon-simple.svg" alt="Логотип интернет-магазина." width="33"
+            height="38">
+        </a>
 
-        <img class="main-navigation__logo-name logo-name" src="./img/logo-name.svg" alt="Название интернет-магазина."
-          width="101" height="18">
+        <a class="main-navigation__logo-name" href="./index.html">
+          <img class="logo-name" src="./img/logo-name.svg" alt="Название интернет-магазина." width="101" height="18">
+        </a>
 
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -60,10 +63,10 @@
       </div>
     </section>
 
-    <section class="goals padding-wrapper">
+    <section class="goals">
       <h2 class="visually-hidden">Цель выбора питания</h2>
 
-      <ul class="goals__list list">
+      <ul class="goals__list list padding-wrapper">
         <li class="goals__item goal-card goal-card--weight_loss">
           <h3 class="heading heading--secondary goal-card__title">Похудение</h3>
           <p class="goal-card__description">
@@ -83,31 +86,33 @@
       </ul>
     </section>
 
-    <section class="stages padding-wrapper">
-      <h2 class="stages__header heading heading--primary">Как это работает</h2>
+    <section class="stages">
+      <div class="padding-wrapper">
+        <h2 class="stages__header heading heading--primary">Как это работает</h2>
 
-      <ul class="stages__list list">
-        <li class="stages__item stage stage--first"><!-- иконки и цифры будут добавляться через псевдо-элементы -->
-          <p class="stage__description">
-            Функциональное питание содержит только полезные питательные вещества.
-          </p>
-        </li>
-        <li class="stages__item stage stage--second">
-          <p class="stage__description">
-            Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-          </p>
-        </li>
-        <li class="stages__item stage stage--third">
-          <p class="stage__description">
-            Замените один-два приема обычной еды на наше функциональное питание.
-          </p>
-        </li>
-        <li class="stages__item stage stage--fourth">
-          <p class="stage__description">
-            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-          </p>
-        </li>
-      </ul>
+        <ul class="stages__list list">
+          <li class="stages__item stage stage--first"><!-- иконки и цифры будут добавляться через псевдо-элементы -->
+            <p class="stage__description">
+              Функциональное питание содержит только полезные питательные вещества.
+            </p>
+          </li>
+          <li class="stages__item stage stage--second">
+            <p class="stage__description">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </p>
+          </li>
+          <li class="stages__item stage stage--third">
+            <p class="stage__description">
+              Замените один-два приема обычной еды на наше функциональное питание.
+            </p>
+          </li>
+          <li class="stages__item stage stage--fourth">
+            <p class="stage__description">
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="example">
@@ -117,7 +122,7 @@
 
           <p class="example__description">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            изнуряющих тренировок! При этом он не менял&nbsp;своих привычек и по-прежнему спит по 16 часов в день.
           </p>
 
           <dl class="example__results results">
@@ -217,7 +222,7 @@
         </ul>
       </div>
       <div class="page-footer__navigation-wrapper">
-        <div class="copyright padding-wrapper">
+        <div class="copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span>HTML Academy</span>
             <svg class="copyright__logo" width="27" height="34" viewBox="10 10 40 40">
@@ -231,6 +236,8 @@
 
     </section>
   </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

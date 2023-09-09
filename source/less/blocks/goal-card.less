@@ -1,7 +1,7 @@
 .goal-card {
   position: relative;
   display: grid;
-  padding: 30px 20px 18px;
+  padding: 30px 20px 22px;
 
   background-color: #f2f2f2;
 
@@ -9,7 +9,7 @@
     position: absolute;
     content: "";
 
-    background-color: #68b738;
+    background-color: #68B738;
     border-radius: 50%;
 
     @media (max-width: @width-mobile-only) {
@@ -44,13 +44,13 @@
 
   @media (min-width: @width-tablet) {
     padding-top: 77px;
-    padding-bottom: 52px;
+    padding-bottom: 60px;
     padding-left: 52px;
     padding-right: 315px;
   }
 
   @media (min-width: @width-desktop) {
-    padding-right: 70px;
+    padding-right: 56px;
   }
 
   &--weight_loss {
@@ -115,6 +115,7 @@
 
   @media (min-width: @width-tablet) {
     padding: 0;
+    margin-bottom: 25px;
 
     font-size: 36px;
     line-height: 1;
@@ -122,22 +123,29 @@
 
   @media (min-width: @width-desktop) {
     padding-left: 164px;
-    margin-bottom: 72px;
+    margin-bottom: 74px;
   }
 }
 
 .goal-card__description {
   margin: 0;
-  padding-bottom: 23px;
-  margin-bottom: 14px;
+  padding-bottom: 21px;
+  margin-bottom: 19px;
   border-bottom: 1px solid #d9d9d9;
 
   font-family: @font-secondary;
 
   @media (min-width: @width-tablet) {
+    margin-bottom: 57px;
+
     border: none;
     font-size: 16px;
     line-height: 24px;
+    padding: 0;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 33px;
   }
 }
 
@@ -155,11 +163,20 @@
     content: "";
     width: 24px;
     height: 12px;
-    margin-left: 15px;
+    margin-left: 17px;
 
     background-image: url("../../img/arrow.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @media (min-width: @width-tablet) {
+      top: 3px;
+      margin-left: 27px;
+    }
+  }
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
   }
 }

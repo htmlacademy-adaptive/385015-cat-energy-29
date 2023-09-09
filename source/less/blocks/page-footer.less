@@ -14,19 +14,30 @@
   @media (min-width: @width-tablet) {
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 66px;
+    padding-bottom: 66px;
   }
 }
 
 .page-footer__navigation-wrapper {
+  padding-top: 19px;
+
   &:not(:last-child) {
     @media (max-width: @width-mobile-only) {
-      padding: 20px 0;
+      padding-bottom: 19px;
 
       text-align: center;
 
       border-bottom: 1px solid #d9d9d9;
     }
+  }
+
+  @media (min-width: @width-tablet) {
+    padding: 0;
   }
 }

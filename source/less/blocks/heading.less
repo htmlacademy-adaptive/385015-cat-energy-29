@@ -19,10 +19,16 @@
   &--tertiary {
     font-size: 16px;
     line-height: 20px;
+
+    @media (min-width: @width-tablet) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
 .heading__page {
+  margin-top: 0;
   margin-bottom: 40px;
 
   @media (max-width: @width-mobile-only) {
@@ -31,6 +37,10 @@
   }
 
   @media (min-width: @width-tablet) {
-    margin-bottom: 120px;
+    margin-bottom: 163px;
   }
+
+  // @media (min-width: @width-desktop) {
+  //   margin-bottom: 163px;
+  // }
 }

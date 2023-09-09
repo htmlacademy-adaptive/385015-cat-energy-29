@@ -1,15 +1,11 @@
 .product {
   padding: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 
   &:not(.product--more) {
     @media (min-width: @width-tablet) {
       background-color: #f2f2f2;
     }
-  }
-
-  &--more {
-    padding-top: 25px;
   }
 
   @media (min-width: @width-tablet) {
@@ -19,6 +15,18 @@
     padding: 36px;
     padding-bottom: 39px;
   }
+
+  @media (min-width: @width-tablet) {
+    padding: 39px;
+  }
+
+  &--more {
+    padding-top: 25px;
+
+    @media (min-width: @width-tablet) {
+      padding-top: 53px;
+    }
+  }
 }
 
 .product__wrapper {
@@ -26,11 +34,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  row-gap: 18px;
+  row-gap: 10px;
   margin-bottom: 13px;
 
   &--more {
     position: relative;
+    margin-bottom: 18px;
 
     text-align: center;
 
@@ -46,7 +55,7 @@
 
       @media (min-width: @width-tablet) {
         height: 60px;
-        margin-bottom: 50px;
+        margin-bottom: 46px;
       }
     }
 
@@ -69,13 +78,23 @@
     }
 
     & .product__title {
-      margin-bottom: 22px;
+      margin-bottom: 10px;
+
+      @media (min-width: @width-tablet) {
+        margin-bottom: 20px;
+      }
     }
   }
 
   @media (min-width: @width-tablet) {
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
+    row-gap: 12px;
+  }
+
+  @media (min-width: @width-tablet) {
+    row-gap: 10px;
     margin-bottom: 33px;
   }
 }
@@ -94,9 +113,8 @@
   }
 
   @media (min-width: @width-tablet) {
-    font-size: 20px;
-    line-height: 24px;
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -113,7 +131,7 @@
 }
 
 .product__subtitle {
-  margin-bottom: 21px;
+  margin: 0;
 
   font-family: @font-secondary;
   font-size: 12px;
@@ -126,12 +144,18 @@
   }
 
   @media (min-width: @width-tablet) {
+    margin: 0;
+
     font-size: 16px;
     line-height: 18px;
 
     & br {
       display: block;
     }
+  }
+
+  @media (min-width: @width-desktop) {
+    font-size: 15px;
   }
 }
 
@@ -170,7 +194,7 @@
 
   @media (min-width: @width-tablet) {
     width: 100%;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
     margin-bottom: 7px;
 
     font-size: 16px;
@@ -181,9 +205,15 @@
 
 .product__order {
   display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .product__more-button {
   background-color: #f2f2f2;
   color: #444444;
+
+  @media (min-width: @width-tablet) {
+    padding: 8px 20px;
+  }
 }

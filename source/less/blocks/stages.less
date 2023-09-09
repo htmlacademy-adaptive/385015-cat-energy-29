@@ -1,32 +1,47 @@
 .stages {
-  margin-bottom: 50px;
-}
-
-.stages__header {
-  margin-bottom: 40px;
+  padding-bottom: 49px;
 
   @media (min-width: @width-tablet) {
-    margin-top: 45px;
+    padding-bottom: 56px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #E6E6E6;
   }
 
   @media (min-width: @width-desktop) {
-    margin-top: 71px;
+    padding: 0;
+    margin-bottom: 80px;
+
+    border: 0;
   }
+}
+
+.stages__header {
+  margin-bottom: 42px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 71px;
+  }
+
+  // @media (min-width: @width-desktop) {
+  //   margin-top: 71px;
+  // }
 }
 
 .stages__list {
   display: grid;
-  gap: 24px;
+  gap: 20px;
 
   counter-reset: number 0;
 
   @media (min-width: @width-tablet) {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 40px;
+    column-gap: 60px;
+    row-gap: 87px;
   }
 
   @media (min-width: @width-desktop) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 75px;
   }
 }
 
