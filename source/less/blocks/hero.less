@@ -8,7 +8,42 @@
   }
 
   @media (min-width: @width-desktop) {
+    position: static;
     margin-bottom: 124px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+
+    background-image: url("../../img/hero-bg.png");
+    background-color: @color-accent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: @width-mobile-only) {
+      width: 320px;
+      height: 302px;
+    }
+
+    @media (min-width: @width-tablet) {
+      display: none;
+    }
+
+    @media (min-width: @width-desktop) {
+      display: block;
+      width: 720px;
+      height: 694px;
+      left: calc(100vw/2);
+      right: 0;
+      top: 0;
+      margin: 0;
+    }
   }
 }
 
@@ -23,15 +58,18 @@
 }
 
 .hero__header-wrapper {
+  padding-top: 27px;
   margin-bottom: 30px;
 
   @media (min-width: @width-tablet) {
     padding-left: 90px;
+    padding-top: 63px;
   }
 
   @media (min-width: @width-desktop) {
     // margin-bottom: 300px;
     margin: 0;
+    padding-top: 110px;
     padding-left: 80px;
   }
 }
@@ -87,7 +125,7 @@
   @media (min-width: @width-desktop) {
     width: 522px;
     height: 499px;
-    margin-top: -75px;
+    margin-top: 31px;
     margin-left: -15px;
     // удалить после подключения адаптивной графики
     img {
