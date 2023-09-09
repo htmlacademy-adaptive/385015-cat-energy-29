@@ -1,5 +1,7 @@
 .main-navigation {
   // padding-top: 7px;
+  // width: @width-mobile;
+  // margin: 0 auto;
 
   @media (min-width: @width-tablet) {
     padding: 0 30px;
@@ -56,7 +58,7 @@
 
 .main-navigation__header {
   display: flex;
-  // justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
 
   // padding-bottom: 14px;
@@ -73,7 +75,7 @@
 }
 
 .main-navigation__logo-icon {
-  margin-right: 56px;
+  // margin-right: 56px;
 
   @media (min-width: @width-tablet) {
     margin-right: 13px;
@@ -81,7 +83,8 @@
 }
 
 .main-navigation__logo-name {
-  margin-right: auto;
+  // margin-right: auto;
+  margin-right: 9px;
 }
 
 .main-navigation__list {
@@ -108,6 +111,7 @@
     background-color: #ffffff;
     position: absolute;
     top: 65px;
+    right: 0;
     width: 320px;
     z-index: 10;
   }

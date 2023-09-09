@@ -22,7 +22,7 @@
       bottom: 0;
       content: "";
       height: 462px;
-      width: @width-tablet;
+      width: 100%;
 
       background-color: #eaeaea;
     }
@@ -97,11 +97,22 @@
   margin: 0;
   // margin-bottom: 20px;
 
-  // @media (min-width: @width-tablet) {
-  //   margin-bottom: 70px;
-  // }
+  @media (max-width: @width-mobile-only) {
+    // margin-bottom: 70px;
+    width: 50%;
+    min-width: calc(@width-mobile - 40px);
+    margin: 0 auto;
+  }
+
+  @media (min-width: @width-tablet) {
+    width: 50%;
+    min-width: calc(@width-tablet - 60px);
+    margin: 0 auto;
+  }
 
   @media (min-width: @width-desktop) {
+    min-width: auto;
+    width: 430px;
     margin-bottom: 0;
   }
 }

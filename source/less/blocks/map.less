@@ -1,6 +1,9 @@
 .map {
   position: relative;
-  background-color: #f2f2f2;
+
+  @media (min-width: @width-desktop) {
+    background-color: #f2f2f2;
+  }
 
   & .margin-wrapper {
     padding-top: 26px;
@@ -17,8 +20,19 @@
   background-color: #ffffff;
   // padding: 26px 0;
 
+  @media (max-width: @width-mobile-only) {
+    // padding: 60px 70px;
+    width: 50%;
+    min-width: @width-mobile;
+  }
+
+  @media (min-width: @width-tablet) {
+    width: @width-tablet;
+  }
+
   &.margin-wrapper {
-    margin: 0;
+    // margin: 0;
+    margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -83,7 +97,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    margin-right: 96px;
+    text-align: left;
   }
 }
 
@@ -100,7 +114,7 @@
   & img {
     @media (min-width: @width-tablet) {
       height: 400px;
-      width: @width-tablet;
+      // width: @width-tablet;
     }
 
     @media (min-width: @width-desktop) {
@@ -111,4 +125,7 @@
 
 .map__image {
   display: block;
+  width: 100vw;
+  height: 362px;
+  object-fit: cover;
 }

@@ -27,7 +27,8 @@
     background-size: contain;
 
     @media (max-width: @width-mobile-only) {
-      width: 320px;
+      // width: 320px;
+      width: auto;
       height: 302px;
     }
 
@@ -49,10 +50,16 @@
 
 .hero__wrapper {
   // padding-top: 27px;
+  @media (min-width: @width-tablet) {
+    width: @width-tablet;
+    // padding: 0 30px;
+    margin: 0 auto;
+  }
 
   @media (min-width: @width-desktop) {
     display: flex;
     position: relative;
+    width: auto;
     // padding-top: 65px;
   }
 }
@@ -103,7 +110,7 @@
 }
 
 .hero__image-wrapper {
-  width: 280px;
+  // width: 280px;
   height: 270px;
   margin-bottom: 2px;
 
