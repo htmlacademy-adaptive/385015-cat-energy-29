@@ -1,4 +1,8 @@
-// .page-footer {}
+.page-footer {
+  @media (min-width: @width-desktop) {
+    background-color: #f2f2f2;
+  }
+}
 
 .page-footer__navigation {
   display: flex;
@@ -21,6 +25,8 @@
   @media (min-width: @width-desktop) {
     padding-top: 66px;
     padding-bottom: 66px;
+    width: @width-desktop;
+    margin: 0 auto;
   }
 }
 

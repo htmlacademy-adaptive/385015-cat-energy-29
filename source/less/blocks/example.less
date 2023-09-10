@@ -26,7 +26,6 @@
     }
 
     @media (min-width: @width-desktop) {
-      width: @width-desktop;
       z-index: -1;
     }
   }
@@ -42,6 +41,8 @@
 
   @media (min-width: @width-desktop) {
     display: flex;
+    width: @width-desktop;
+    margin: 0 auto;
   }
 }
 
@@ -91,18 +92,12 @@
 }
 
 .example__results {
-  margin: 0;
-
-  @media (max-width: @width-mobile-only) {
-    width: 50%;
-    min-width: calc(@width-mobile - 40px);
-    margin: 0 auto;
-  }
+  width: 50%;
+  min-width: @width-mobile - 2*20px;
+  margin: 0 auto;
 
   @media (min-width: @width-tablet) {
-    width: 50%;
-    min-width: calc(@width-tablet - 60px);
-    margin: 0 auto;
+    min-width: @width-tablet - 2*30px;
   }
 
   @media (min-width: @width-desktop) {

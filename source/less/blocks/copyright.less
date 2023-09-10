@@ -1,4 +1,9 @@
 .copyright {
+  @media (max-width: @width-mobile-only) {
+    width: @width-mobile - 2*20px;
+    margin: 0 auto;
+  }
+
   @media (min-width: @width-tablet) {
     margin-left: 20px;
   }

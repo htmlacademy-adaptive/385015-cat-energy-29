@@ -37,12 +37,13 @@
 
     @media (min-width: @width-desktop) {
       display: block;
-      width: 720px;
       height: 694px;
       left: calc(100vw / 2);
       right: 0;
       top: 0;
       margin: 0;
+
+      background-position: left;
     }
   }
 }
@@ -56,7 +57,7 @@
   @media (min-width: @width-desktop) {
     display: flex;
     position: relative;
-    width: auto;
+    width: @width-desktop;
   }
 }
 
