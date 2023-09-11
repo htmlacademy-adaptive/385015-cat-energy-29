@@ -1,50 +1,71 @@
 .stage {
-  // display: grid;
-  // min-height: 60px;
   position: relative;
+
+  counter-increment: number;
 
   @media (min-width: @width-tablet) {
     width: 250px;
+    min-height: 230px;
   }
 
-  // &--first {}
+  &--first {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-01.svg");
+    }
+  }
 
-  // &--second {}
+  &--second {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-02.svg");
+    }
+  }
 
-  // &--third {}
+  &--third {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-03.svg");
+    }
+  }
 
-  // &--fourth {}
+  &--fourth {
+    & .stage__description::before {
+      background-image: url("../../img/stages/stage-04.svg");
+    }
+  }
 }
 
 .stage__description {
+  display: flex;
   margin: 0;
-  margin-left: 80px;
+  align-items: center;
 
   font-family: @font-secondary;
   color: #444444;
 
   @media (min-width: @width-tablet) {
     margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 57px;
   }
 
   &::before {
     display: block;
     content: "";
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+
     background-color: @color-accent;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     @media (max-width: @width-mobile-only) {
-      position: absolute;
-      left: 0;
-      top: 0;
+      margin-right: 20px;
     }
 
     @media (min-width: @width-tablet) {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       width: 80px;
       height: 80px;
     }
@@ -53,11 +74,12 @@
   &::after {
     @media (min-width: @width-tablet) {
       position: absolute;
-      content: "1";
-      left: 90px;
+      content: counter(number);
+      left: 115px;
       top: -40px;
       z-index: -1;
 
+      font-family: @font-primary;
       font-size: 280px;
       line-height: 1;
       color: #f2f2f2;

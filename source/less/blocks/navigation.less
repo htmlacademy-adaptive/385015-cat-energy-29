@@ -8,9 +8,13 @@
     border-bottom: 1px solid #e6e6e6;
   }
 
-  &:not(:first-child) {
+  &:not(:last-child) {
     @media (min-width: @width-tablet) {
-      margin-left: 33px;
+      margin-right: 34px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin-right: 34px;
     }
   }
 }
@@ -18,18 +22,17 @@
 .navigation__link {
   position: relative;
 
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1;
   text-transform: uppercase;
   color: #000000;
 
   @media (min-width: @width-desktop) {
-    // color: #ffffff;
+    letter-spacing: 0.5px;
   }
 
   &--current::after {
     @media (min-width: @width-tablet) {
-      // margin-left: 33px;
       position: absolute;
       left: 0;
       bottom: -10px;
@@ -37,10 +40,6 @@
       height: 2px;
       width: 100%;
       background-color: @color-accent;
-    }
-
-    @media (min-width: @width-desktop) {
-      // background-color: #ffffff;
     }
   }
 }

@@ -6,38 +6,89 @@
     text-align: center;
     color: #ffffff;
   }
+
+  @media (min-width: @width-desktop) {
+    position: static;
+    margin-bottom: 124px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+
+    background-image: url("../../img/hero-bg.png");
+    background-color: @color-accent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: @width-mobile-only) {
+      width: auto;
+      height: 302px;
+    }
+
+    @media (min-width: @width-tablet) {
+      display: none;
+    }
+
+    @media (min-width: @width-desktop) {
+      display: block;
+      height: 694px;
+      left: calc(100vw / 2);
+      right: 0;
+      top: 0;
+      margin: 0;
+
+      background-position: left;
+    }
+  }
 }
 
 .hero__wrapper {
+  @media (min-width: @width-tablet) {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+
   @media (min-width: @width-desktop) {
     display: flex;
     position: relative;
+    width: @width-desktop;
   }
 }
 
 .hero__header-wrapper {
+  padding-top: 27px;
+  margin-bottom: 30px;
+
   @media (min-width: @width-tablet) {
-    padding-left: 120px;
+    padding-left: 90px;
+    padding-top: 63px;
   }
 
   @media (min-width: @width-desktop) {
-    margin-bottom: 300px;
+    margin: 0;
+    padding-top: 110px;
     padding-left: 80px;
   }
 }
 
 .hero__header {
-  padding-top: 27px;
   margin: 0;
   margin-bottom: 25px;
 
   @media (min-width: @width-tablet) {
-    padding-top: 65px;
     margin-bottom: 40px;
   }
 }
 
 .hero__slogan {
+  margin: 0;
+
   font-size: 14px;
   line-height: 1;
   text-transform: uppercase;
@@ -49,28 +100,28 @@
 }
 
 .hero__image-wrapper {
-  width: 280px;
   height: 270px;
+  margin-bottom: 2px;
 
   @media (min-width: @width-tablet) {
     position: relative;
-    width: 720px;
-    height: 694px;
+    width: 660px;
+    height: 586px;
     z-index: -1;
-    margin-top: -60px;
+    margin-top: -110px;
+    margin-left: 81px;
 
     // удалить после подключения адаптивной графики
     img {
-      width: 720px;
-      height: 694px;
+      width: 627px;
     }
   }
 
   @media (min-width: @width-desktop) {
-    width: 552px;
+    width: 522px;
     height: 499px;
-    margin-top: 20px;
-
+    margin-top: 31px;
+    margin-left: -15px;
     // удалить после подключения адаптивной графики
     img {
       width: 552px;

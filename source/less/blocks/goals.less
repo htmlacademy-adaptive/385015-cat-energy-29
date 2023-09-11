@@ -1,21 +1,36 @@
 .goals {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+
+  @media (min-width: @width-tablet) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 74px;
+  }
 }
 
 .goals__list {
   display: grid;
 
   @media (min-width: @width-desktop) {
-    // font-size: 36px;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    width: @width-desktop;
+    margin: 0 auto;
   }
 }
 
 .goals__item {
   &:not(:last-child) {
-    @media (max-width: @width-desktop) {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+
+    @media (min-width: @width-tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin: 0;
     }
   }
 }

@@ -5,10 +5,33 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+
+    @media (min-width: @width-tablet) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: @width-desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @width-tablet) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.field__person:not(:last-child) {
+  @media (min-width: @width-desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .field__input {
-  padding: 14px 15px;
+  padding: 13px 14px;
   margin-left: 13px;
   flex-grow: 1;
 
@@ -23,14 +46,58 @@
   &::placeholder {
     color: #444444;
   }
+
+  @media (min-width: @width-tablet) {
+    padding: 10px 19px;
+
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .field__textarea {
   margin-left: 0;
+  height: 150px;
+
+  @media (min-width: @width-tablet) {
+    padding: 16px 20px;
+    height: 175px;
+  }
 }
 
 .field__label {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
+
+  &--email,
+  &--phone {
+    &::after {
+      position: absolute;
+      content: "";
+      right: 14px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  &--email::after {
+    width: 18px;
+    height: 14px;
+
+    background-image: url("../../img/icon-email.svg");
+  }
+
+  &--phone::after {
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../../img/icon-phone.svg");
+  }
 }
