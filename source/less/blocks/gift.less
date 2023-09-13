@@ -2,22 +2,38 @@
   padding: 59px;
   padding-bottom: 43px;
 
-  background-image: url("../../img/gift-bg.png");
+  background-image: url("../../img/gift-bg.jpg");
   background-color: @color-accent;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-bg@2x.jpg");
+  }
+
   @media (min-width: @width-tablet) {
     padding-top: 71px;
     padding-left: 78px;
     padding-bottom: 64px;
+
+    background-image: url("../img/gift-bg-tablet.jpg");
+  }
+
+  @media (min-width: @width-tablet) and (min-resolution: 2dppx) {
+    background-image: url("../img/gift-bg-tablet@2x.jpg");
   }
 
   @media (min-width: @width-desktop) {
     margin: 0;
     padding: 40px;
     padding-top: 60px;
+
+    background-image: url("../img/gift-bg-desktop.jpg");
+  }
+
+  @media (min-width: @width-desktop) and (min-resolution: 2dppx) {
+    background-image: url("../img/gift-bg-desktop@2x.jpg");
   }
 }
 

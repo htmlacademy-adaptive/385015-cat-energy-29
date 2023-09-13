@@ -20,7 +20,6 @@
     margin: 0 auto;
     z-index: -1;
 
-    background-image: url("../../img/hero-bg.png");
     background-color: @color-accent;
     background-position: center center;
     background-repeat: no-repeat;
@@ -29,6 +28,12 @@
     @media (max-width: @width-mobile-only) {
       width: auto;
       height: 302px;
+
+      background-image: url("../../img/hero-bg.jpg");
+    }
+
+    @media (max-width: @width-mobile-only) and (min-resolution: 2dppx) {
+      background-image: url("../img/hero-bg@2x.jpg");
     }
 
     @media (min-width: @width-tablet) {
@@ -44,6 +49,11 @@
       margin: 0;
 
       background-position: left;
+      background-image: url("../../img/hero-bg-desktop.jpg");
+    }
+
+    @media (min-width: @width-desktop) and (min-resolution: 2dppx) {
+      background-image: url("../img/hero-bg-desktop@2x.jpg");
     }
   }
 }
@@ -105,27 +115,20 @@
 
   @media (min-width: @width-tablet) {
     position: relative;
-    width: 660px;
-    height: 586px;
+    width: 709px;
+    height: 585px;
     z-index: -1;
     margin-top: -110px;
-    margin-left: 81px;
 
-    // удалить после подключения адаптивной графики
     img {
-      width: 627px;
+      width: 709px;
     }
   }
 
   @media (min-width: @width-desktop) {
-    width: 522px;
-    height: 499px;
-    margin-top: 31px;
-    margin-left: -15px;
-    // удалить после подключения адаптивной графики
-    img {
-      width: 552px;
-      height: 499px;
-    }
+    width: 552px;
+    height: 505px;
+    margin-top: 26px;
+    margin-left: -45px;
   }
 }

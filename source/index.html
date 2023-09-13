@@ -17,12 +17,17 @@
 
       <div class="main-navigation__header">
         <a class="main-navigation__logo-icon" href="./index.html">
-          <img class="logo-icon" src="./img/logo-icon-simple.svg" alt="Логотип интернет-магазина." width="33"
-            height="38">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/logo-icon-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-icon-tablet.svg">
+            <img class="main-navigation__logo-icon logo-icon" src="./img/logo-icon.svg" width="33" height="38"
+              alt="Логотип интернет-магазина.">
+          </picture>
         </a>
 
         <a class="main-navigation__logo-name" href="./index.html">
-          <img class="logo-name" src="./img/logo-name.svg" alt="Название интернет-магазина." width="101" height="18">
+          <img class="main-navigation__logo-name logo-name" src="./img/logo-name.svg" width="101" height="18"
+            alt="Интернет-магазин CAT ENERGY.">
         </a>
 
         <button class="main-navigation__toggle" type="button">
@@ -56,7 +61,14 @@
         </div>
 
         <div class="hero__image-wrapper">
-          <img src="./img/hero-image.png" alt="Изображение продукции." width="280" height="270">
+          <picture>
+            <source media="(min-width: 1440px)"
+              srcset="./img/hero-image-desktop.png 1x, ./img/hero-image-desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/hero-image-tablet.png 1x, ./img/hero-image-tablet@2x.png 2x">
+            <img src="./img/hero-image.png" srcset="./img/hero-image@2x.png 2x" width="280" height="270"
+              alt="Изображение продукции.">
+          </picture>
         </div>
 
         <a class="button button--more button--mobile_on" href="./form.html">Подобрать программу</a>
@@ -143,13 +155,29 @@
 
         <div class="example__compare compare">
           <div class="compare__image">
-            <img src="./img/example-before.png" alt="Пример до прохождения программы." width="140" height="256">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="./img/example-before-tablet.png 1x, ./img/example-before-tablet@2x.png 2x">
+              <img src="./img/example-before.png" srcset="./img/example-before@2x.png 2x" width="140" height="256"
+                alt="Пример до прохождения программы.">
+            </picture>
           </div>
           <button class="example__toggle" type="button">
             <span class="visually-hidden">Изменить соотношение изображений.</span>
+
+            <svg class="example__toggler" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="1" y="1" width="38" height="38" rx="19" fill="#fff" />
+              <path d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z" fill="currentcolor" />
+              <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentcolor" stroke-width="2" />
+            </svg>
           </button>
           <div class="compare__image">
-            <img src="./img/example-after.png" alt="Пример после прохождения программы." width="140" height="256">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="./img/example-after-tablet.png 1x, ./img/example-after-tablet@2x.png 2x">
+              <img src="./img/example-after.png" srcset="./img/example-after@2x.png 2x" width="140" height="256"
+                alt="Пример после прохождения программы.">
+            </picture>
           </div>
         </div>
       </div>
@@ -174,8 +202,14 @@
       </div>
 
       <div class="map__image-wrapper">
-        <img class="map__image" src="./img/map-location.png"
-          alt="Адрес офиса. Санкт-Петербург, улица Большая Конюшенная, дом 19/8." width="320" height="362">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="./img/map-location-desktop.png 1x, ./img/map-location-desktop@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="./img/map-location-tablet.png 1x, ./img/map-location-tablet@2x.png 2x">
+          <img class="map__image" src="./img/map-location.png" srcset="./img/map-location@2x.png 2x" width="320"
+            height="362" alt="Адрес офиса. Санкт-Петербург, улица Большая Конюшенная, дом 19/8.">
+        </picture>
       </div>
     </section>
 
