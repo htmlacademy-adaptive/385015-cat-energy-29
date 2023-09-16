@@ -152,7 +152,6 @@
 .goal-card__link {
   position: relative;
   display: flex;
-  // width: max-content;
 
   font-size: 16px;
   line-height: 1;
@@ -161,32 +160,21 @@
 
   &:active {
     opacity: 0.3;
-    ;
   }
 
   &::after {
-    // position: absolute;
     display: block;
     top: -4px;
     content: "";
     width: 40px;
-    // height: 24px;
 
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-position: right center;
-    // background-size: 60%;
 
     @media (min-width: @width-tablet) {
       width: 50px;
       top: -5px;
-      // height: 29.5px;
-
-      // background-size: 46%;
-    }
-
-    @media (min-width: @width-desktop) {
-      // height: 30px;
     }
   }
 
