@@ -23,8 +23,8 @@
     position: absolute;
     width: 18px;
     height: 14px;
-    top: 21px;
-    right: 16px;
+    top: 15px;
+    right: 13px;
   }
 
   @media (min-width: @width-tablet) {
@@ -54,6 +54,14 @@
 
   &::placeholder {
     color: #444444;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #444444;
+  }
+
+  &:invalid {
+    outline: 2px solid #FF8282;
   }
 
   @media (min-width: @width-tablet) {
