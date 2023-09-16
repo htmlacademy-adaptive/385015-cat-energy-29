@@ -16,6 +16,8 @@
 
 .catalog__list {
   @media (min-width: @width-tablet) {
+    width: @width-tablet - 2*30px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
@@ -23,6 +25,7 @@
   }
 
   @media (min-width: @width-desktop) {
+    width: @width-desktop - 2*110px;
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
     row-gap: 143px;

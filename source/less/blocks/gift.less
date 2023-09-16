@@ -13,9 +13,7 @@
   }
 
   @media (min-width: @width-tablet) {
-    padding-top: 71px;
-    padding-left: 78px;
-    padding-bottom: 64px;
+    padding: 0;
 
     background-image: url("../img/gift-bg-tablet.jpg");
   }
@@ -58,7 +56,7 @@
     background-image: url("../../img/icon-gift.svg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     @media (min-width: @width-tablet) {
       margin: 0;
@@ -81,5 +79,16 @@
   @media (min-width: @width-desktop) {
     display: grid;
     height: 100%;
+  }
+}
+
+.gift__description-wrapper {
+  @media (min-width: @width-tablet) and (max-width: @width-tablet-only) {
+    width: @width-tablet - 2*30px;
+    padding-top: 71px;
+    padding-bottom: 64px;
+    padding-left: 78px;
+    padding-right: 40px;
+    margin: 0 auto;
   }
 }

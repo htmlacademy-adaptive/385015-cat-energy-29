@@ -28,20 +28,25 @@
 }
 
 .heading__page {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
 
   @media (max-width: @width-mobile-only) {
+    width: @width-mobile;
     margin-top: 27px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: @width-tablet) {
+    width: @width-tablet - 2*30px;
     margin-top: 62px;
     margin-bottom: 163px;
   }
 
   @media (min-width: @width-desktop) {
+    width: @width-desktop - 2*110px;
     margin-top: 71px;
   }
 }

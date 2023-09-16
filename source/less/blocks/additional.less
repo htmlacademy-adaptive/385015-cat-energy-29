@@ -22,6 +22,7 @@
 
 .additional__header {
   position: relative;
+  margin-left: calc(((100vw - (@width-mobile - 2*20px)) / 2) - 20px);
   margin-bottom: 28px;
   padding-left: 20px;
   padding-right: 20px;
@@ -30,7 +31,7 @@
   background-color: #ffffff;
 
   @media (min-width: @width-tablet) {
-    margin-left: 30px;
+    margin-left: calc(((100vw - (@width-tablet - 2*30px)) / 2));
     margin-right: 30px;
     margin-bottom: 80px;
     padding-left: 40px;
@@ -41,7 +42,7 @@
   }
 
   @media (min-width: @width-desktop) {
-    margin-left: 70px;
+    margin-left: calc(((100vw - (@width-desktop - 2*110px)) / 2) - 40px);
     margin-right: 70px;
     margin-bottom: 78px;
   }
@@ -49,6 +50,9 @@
 
 .additional__wrapper {
   @media (min-width: @width-desktop) {
+    width: @width-desktop - 2*110px;
+    margin: 0 auto;
+    padding: 0;
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 80px;
@@ -81,13 +85,25 @@
   }
 
   @media (min-width: @width-tablet) {
+    padding: 0;
+  }
+}
+
+.additional__card {
+  width: @width-mobile - 2*20px;
+  margin: 0 auto;
+
+  @media (min-width: @width-tablet) {
+    width: @width-tablet - 2*30px;
     padding: 27px 38px 28px;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 23px;
   }
 
   @media (min-width: @width-desktop) {
     display: flex;
+    width: 896px;
     padding: 17px 0 14px;
     align-items: center;
   }
