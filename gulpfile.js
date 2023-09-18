@@ -29,7 +29,7 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename('style.css')) // style.min.css
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
