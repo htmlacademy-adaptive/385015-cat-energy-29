@@ -124,6 +124,27 @@
   color: #666666;
 
   cursor: pointer;
+
+  &:hover {
+    color: #68b738;
+    background-color: #68b738;
+  }
+
+  &:focus-visible {
+    outline-color: #000000;
+    background-color: #000000;
+    color: #000000;
+
+    & .example__toggler {
+      outline: 2px solid #000000;
+      border-radius: 50%;
+    }
+  }
+
+  &:active {
+    color: #5eaa2f;
+    background-color: #5eaa2f;
+  }
 }
 
 .example__toggler {
