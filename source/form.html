@@ -7,6 +7,10 @@
 
   <title>HTML Academy: Кэт энерджи</title>
 
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff" as="font">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff" as="font">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/style.css">
@@ -122,18 +126,18 @@
             <legend class="visually-hidden">Данные Вашего кота</legend>
 
             <ul class="request__list list-fields list">
-              <li class="request__item field field__person">
+              <li class="request__item field field--person">
                 <label class="field__label">Имя:*
                   <input class="field__input" type="text" name="cat-name" placeholder="Имя кота" value="Барсик"
                     required>
                 </label>
               </li>
-              <li class="request__item field field__person">
+              <li class="request__item field field--person">
                 <label class="field__label">Вес&nbsp;(кг):*
                   <input class="field__input" type="text" name="cat-weight" placeholder="Вес кота" value="7" required>
                 </label>
               </li>
-              <li class="request__item field field__person">
+              <li class="request__item field field--person">
                 <label class="field__label">Возраст&nbsp;(лет):
                   <input class="field__input" type="text" name="cat-age" placeholder="Возраст кота" value="7">
                 </label>
@@ -144,19 +148,19 @@
             <legend class="visually-hidden">Цель программы</legend>
 
             <ul class="request__list list-controls list">
-              <li class="request__item control control__goal">
+              <li class="request__item control control--goal">
                 <label class="control__label">
                   <input class="visually-hidden control__input" type="radio" name="goal" value="weight-loss" checked>
                   <span class="control__title">Похудение</span>
                 </label>
               </li>
-              <li class="request__item control control__goal">
+              <li class="request__item control control--goal">
                 <label class="control__label">
                   <input class="visually-hidden control__input" type="radio" name="goal" value="weight-gain">
                   <span class="control__title">Набор массы</span>
                 </label>
               </li>
-              <li class="request__item control control__goal">
+              <li class="request__item control control--goal">
                 <label class="control__label">
                   <input class="visually-hidden control__input" type="radio" name="goal" value="need-consultation">
                   <span class="control__title">Не знаю (Нужен ваш совет)</span>
@@ -166,7 +170,7 @@
           </fieldset>
         </div>
         <fieldset class="request-form__group request-form__owner">
-          <legend class="heading heading--secondary request-form__header">Контактные&nbspданные (владельца&nbspкота)
+          <legend class="heading heading--secondary request-form__header">Контактные&nbsp;данные (владельца&nbsp;кота)
           </legend>
 
           <ul class="request-form__owner-list request__list list-fields list margin-wrapper">
@@ -174,19 +178,21 @@
               <label class="field__label field__label--email">E-mail:*
                 <input class="field__input" type="email" placeholder="name@domain.com" value="kuklachev@gmail.com"
                   required>
+
+                <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                  <use xlink:href="#email"></use>
+                </svg>
               </label>
-              <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-                <use xlink:href="#email"></use>
-              </svg>
             </li>
             <li class="request__item field">
               <label class="field__label field__label--phone">Телефон:*
                 <input class="field__input" type="tel" placeholder="+7 (999) 888 77 66" value="8 (960) 900-60-90"
                   required>
+
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <use xlink:href="#phone"></use>
+                </svg>
               </label>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <use xlink:href="#phone"></use>
-              </svg>
             </li>
           </ul>
         </fieldset>
@@ -196,7 +202,6 @@
           <div class="request__item field margin-wrapper">
             <textarea class="field__textarea field__input" name="comment" cols="30" rows="7"
               placeholder="Расскажите обо всех повадках кота"></textarea>
-            </label>
           </div>
         </fieldset>
         <fieldset class="request-form__group request-form__optional">
@@ -271,7 +276,7 @@
       <h2 class="visually-hidden">Навигация футера</h2>
 
       <div class="page-footer__navigation-wrapper">
-        <a href="./index.html" class="logo logo-name--footer">
+        <a href="./index.html" class="logo-name logo-name--footer">
           <svg role="img" width="128" height="24" viewBox="0 0 101 18" fill="none" aria-label="Группа Telegram.">
             <use xlink:href="#cat-energy"></use>
           </svg>

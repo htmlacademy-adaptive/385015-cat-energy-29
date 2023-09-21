@@ -112,11 +112,15 @@
 .main-navigation__list {
   margin-right: 4px;
 
-  @media (min-width: @width-desktop) {
-    width: 477px;
+  @media (min-width: @width-tablet) {
+    width: 437px;
     flex-wrap: wrap;
-    gap: 34px;
+    gap: 32px;
     row-gap: 25px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 474px;
   }
 }
 
