@@ -152,31 +152,72 @@
 .goal-card__link {
   position: relative;
   display: flex;
+  width: max-content;
 
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: #000000;
 
+  &::before {
+    position: absolute;
+    top: 7px;
+    right: -35px;
+    content: "";
+    height: 2px;
+    width: 18px;
+    background-color: #000000;
+
+    @media (min-width: @width-tablet) {
+      top: 9px;
+      right: -45px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 2px;
+    right: -49px;
+    content: "";
+    border: 6px solid transparent;
+    border-left: 9px solid #000000;
+
+    @media (min-width: @width-tablet) {
+      top: 4px;
+      right: -59px;
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
 
-  &::after {
-    display: block;
-    top: -4px;
-    content: "";
-    width: 40px;
+  &:hover {
+    &::before {
+      width: 26px;
+      right: -52px;
+    }
 
-    background-image: url("../img/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: right center;
-
-    @media (min-width: @width-tablet) {
-      width: 50px;
-      top: -5px;
+    &::after {
+      right: -66px;
     }
   }
+
+  // &::after {
+  //   display: block;
+  //   top: -4px;
+  //   content: "";
+  //   width: 40px;
+
+  //   background-image: url("../img/arrow.svg");
+  //   background-repeat: no-repeat;
+  //   background-position: right center;
+
+  //   @media (min-width: @width-tablet) {
+  //     width: 50px;
+  //     top: -5px;
+  //   }
+  // }
 
   @media (min-width: @width-tablet) {
     font-size: 20px;

@@ -11,7 +11,7 @@
     margin-bottom: 13px;
 
     @media (min-width: @width-tablet) {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
 
     @media (min-width: @width-desktop) {
@@ -25,17 +25,27 @@
     height: 14px;
     top: 15px;
     right: 13px;
+
+    @media (min-width: @width-tablet) {
+      top: 18px;
+      right: 14px;
+    }
+
+    @media (min-width: @width-desktop) {
+      top: 21px;
+      right: 17px;
+    }
   }
 
   @media (min-width: @width-tablet) {
     font-size: 20px;
     line-height: 1;
   }
-}
 
-.field__person:not(:last-child) {
-  @media (min-width: @width-desktop) {
-    margin-bottom: 20px;
+  &--person:not(:last-child) {
+    @media (min-width: @width-desktop) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -56,12 +66,24 @@
     color: #444444;
   }
 
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
   &:focus-visible {
     outline: 2px solid #444444;
+
+    & + svg {
+      color: #68b738;
+    }
   }
 
   &:invalid {
     outline: 2px solid #ff8282;
+
+    & + svg {
+      color: #ff8282;
+    }
   }
 
   @media (min-width: @width-tablet) {

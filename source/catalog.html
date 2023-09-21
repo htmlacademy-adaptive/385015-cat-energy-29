@@ -7,6 +7,10 @@
 
   <title>HTML Academy: Кэт энерджи</title>
 
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff" as="font">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff" as="font">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/style.min.css">
@@ -97,7 +101,7 @@
 
   <main class="page-main">
     <section class="catalog">
-      <h1 class="heading__page heading--primary">Каталог продукции</h1>
+      <h1 class="heading heading--primary heading__page">Каталог продукции</h1>
 
       <ul class="catalog__list list">
         <li class="catalog__item">
@@ -403,8 +407,8 @@
         </li>
         <li class="catalog__item">
           <article class="product product--more">
-            <div class="product__wrapper--more">
-              <p class="heading heading--tertiary product__title">Показать еще 100500&nbspтоваров</p>
+            <div class="product__wrapper">
+              <h3 class="heading heading--tertiary product__title">Показать еще 100500&nbsp;товаров</h3>
               <p class="product__subtitle">На самом деле вкусов <br> гораздо больше!</p>
             </div>
 
@@ -421,7 +425,7 @@
         <ul class="additional__list list">
           <li class="additional__item">
             <article class="additional__card">
-              <p class="additional__title">Сахарозаменитель</p>
+              <h3 class="additional__title">Сахарозаменитель</h3>
               <p class="additional__parameter">
                 <span>1 упаковка (100 г)</span>
                 <span>200 ₽</span>
@@ -431,7 +435,7 @@
           </li>
           <li class="additional__item">
             <article class="additional__card">
-              <p class="additional__title">Питьевая вода</p>
+              <h3 class="additional__title">Питьевая вода</h3>
               <p class="additional__parameter">
                 <span>5 литров</span>
                 <span>50 ₽</span>
@@ -441,7 +445,7 @@
           </li>
           <li class="additional__item">
             <article class="additional__card">
-              <p class="additional__title">Молоко</p>
+              <h3 class="additional__title">Молоко</h3>
               <p class="additional__parameter">
                 <span>1 литр</span>
                 <span>100 ₽</span>
@@ -451,7 +455,7 @@
           </li>
           <li class="additional__item">
             <article class="additional__card">
-              <p class="additional__title">Витамины</p>
+              <h3 class="additional__title">Витамины</h3>
               <p class="additional__parameter">
                 <span>1 упаковка (30 г)</span>
                 <span>300 ₽</span>
@@ -504,7 +508,7 @@
       <h2 class="visually-hidden">Навигация футера</h2>
 
       <div class="page-footer__navigation-wrapper">
-        <a href="./index.html" class="logo logo-name--footer">
+        <a href="./index.html" class="logo-name logo-name--footer">
           <svg role="img" width="128" height="24" viewBox="0 0 101 18" fill="none" aria-label="Группа Telegram.">
             <use xlink:href="#cat-energy"></use>
           </svg>
